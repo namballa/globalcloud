@@ -16,7 +16,7 @@ resource "azurerm_resource_group" "this" {
 }
 
 resource "azurerm_key_vault" "this" {
-  name = "singherazurerm"
+  name = "glbcldazurerm"
 
   resource_group_name = azurerm_resource_group.this.name
   location            = azurerm_resource_group.this.location
