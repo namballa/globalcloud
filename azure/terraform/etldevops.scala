@@ -1,7 +1,7 @@
 // Databricks notebook source
-val appID = "c5a6e348-1b5d-4de3-bb42-04f055932da1"
-val secret = "d\u003e+YUv@S4_s}=j2J"
-val tenantID = "e3bbde79-25a2-462f-8e11-88f297ee81c4"
+val appID ="8c4e1b4b-f39b-47c4-a79b-a155da40d479"
+val secret ="Lb8[Tdrf%0?{2#n3"
+val tenantID ="e3bbde79-25a2-462f-8e11-88f297ee81c4"
 
 spark.conf.set("fs.azure.account.auth.type", "OAuth")
 spark.conf.set("fs.azure.account.oauth.provider.type", "org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider")
@@ -12,11 +12,11 @@ spark.conf.set("fs.azure.createRemoteFileSystemDuringInitialization", "true")
 
 // COMMAND ----------
 
-val storageAccountName = "saauedevglbcld"
-val appID = "c5a6e348-1b5d-4de3-bb42-04f055932da1"
-val secret = "d\u003e+YUv@S4_s}=j2J"
-val fileSystemName = "fsauedevglbcld"
-val tenantID = "e3bbde79-25a2-462f-8e11-88f297ee81c4"
+val storageAccountName ="saauedevsingheradevops"
+val appID ="8c4e1b4b-f39b-47c4-a79b-a155da40d479"
+val secret ="Lb8[Tdrf%0?{2#n3"
+val fileSystemName ="saauedevsingheradevops"
+val tenantID ="e3bbde79-25a2-462f-8e11-88f297ee81c4"
 
 spark.conf.set("fs.azure.account.auth.type." + storageAccountName + ".dfs.core.windows.net", "OAuth")
 spark.conf.set("fs.azure.account.oauth.provider.type." + storageAccountName + ".dfs.core.windows.net", "org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider")
@@ -34,8 +34,8 @@ spark.conf.set("fs.azure.createRemoteFileSystemDuringInitialization", "false")
 // COMMAND ----------
 
 // MAGIC %python
-// MAGIC fileSystemName = "fsauedevglbcld"
-// MAGIC storageAccountName = "saauedevglbcld"
+// MAGIC fileSystemName ="saauedevsingheradevops"
+// MAGIC storageAccountName ="saauedevsingheradevops"
 // MAGIC dbutils.fs.cp("file:///tmp/small_radio_json.json", "abfss://" + fileSystemName + "@" + storageAccountName + ".dfs.core.windows.net/")
 
 // COMMAND ----------
@@ -56,16 +56,16 @@ renamedColumnsDF.show()
 // COMMAND ----------
 
 //Azure Synapse related settings
-val blobStorage = "saauedevglbcld.blob.core.windows.net"
-val blobContainer = "fsauedevglbcld"
-val blobAccessKey =  "qaKS0PGS+Y0/kcZmTtspudvm7NSXZBxhIeRumX+Q0M4CsHhPYdbOhoPOfViuG6d7s9/BQUC9VWJ8+AStYY+wCw=="
+val blobStorage ="saauedevsingheradevopsblobcorewindowsnet"
+val blobContainer ="fsauedevsingheradevops"
+val blobAccessKey ="9exos5ljyWNYvgJPiQvyFb6e0GAJFz1VypFU04RV7YFKTQUoafucBVecfCwqXbPbSrGzoXYUaAStZRBddQ"
 val tempDir = "wasbs://" + blobContainer + "@" + blobStorage +"/tempDirs"
 val acntInfo = "fs.azure.account.key."+ blobStorage
 sc.hadoopConfiguration.set(acntInfo, blobAccessKey)
-val dwDatabase = "pool_glbcld"
+val dwDatabase ="pool_singheradevops"
 val dwServer = "ws-aue-dev-glbcld.sql.azuresynapse.net"
-val dwUser = "sqladmin"
-val dwPass = "9MUJwag0yRBXtz6i"
+val dwUser ="sqladmin"
+val dwPass ="2ytIvKIDyD1G9LSf"
 val dwJdbcPort =  "1433"
 val dwJdbcExtraOptions = "encrypt=true;trustServerCertificate=true;hostNameInCertificate=*.database.windows.net;loginTimeout=30;"
 val sqlDwUrl = "jdbc:sqlserver://" + dwServer + ":" + dwJdbcPort + ";database=" + dwDatabase + ";user=" + dwUser+";password=" + dwPass + ";$dwJdbcExtraOptions"
