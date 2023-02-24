@@ -1,6 +1,6 @@
 // Databricks notebook source
-val appID ="8c4e1b4b-f39b-47c4-a79b-a155da40d479"
-val secret ="Lb8[Tdrf%0?{2#n3"
+val appID ="f269e8cd-15aa-4c31-9787-5886eac7b7eb"
+val secret ="s9LA4$W#wggZUwPu"
 val tenantID ="e3bbde79-25a2-462f-8e11-88f297ee81c4"
 
 spark.conf.set("fs.azure.account.auth.type", "OAuth")
@@ -13,8 +13,8 @@ spark.conf.set("fs.azure.createRemoteFileSystemDuringInitialization", "true")
 // COMMAND ----------
 
 val storageAccountName ="saauedevsingheradevops"
-val appID ="8c4e1b4b-f39b-47c4-a79b-a155da40d479"
-val secret ="Lb8[Tdrf%0?{2#n3"
+val appID ="f269e8cd-15aa-4c31-9787-5886eac7b7eb"
+val secret ="s9LA4$W#wggZUwPu"
 val fileSystemName ="saauedevsingheradevops"
 val tenantID ="e3bbde79-25a2-462f-8e11-88f297ee81c4"
 
@@ -56,16 +56,16 @@ renamedColumnsDF.show()
 // COMMAND ----------
 
 //Azure Synapse related settings
-val blobStorage ="saauedevsingheradevopsblobcorewindowsnet"
+val blobStorage ="https://saauedevsingheradevops.blob.core.windows.net/"
 val blobContainer ="fsauedevsingheradevops"
-val blobAccessKey ="9exos5ljyWNYvgJPiQvyFb6e0GAJFz1VypFU04RV7YFKTQUoafucBVecfCwqXbPbSrGzoXYUaAStZRBddQ"
+val blobAccessKey ="hk9jiVdUxyYfzQZp0Ylpslm71KkSv7iw63c6sB2BCTfYmRQ2LhcBvOOQl9YDTa6Lrc0E+yjCW+/w+ASt14frCQ=="
 val tempDir = "wasbs://" + blobContainer + "@" + blobStorage +"/tempDirs"
 val acntInfo = "fs.azure.account.key."+ blobStorage
 sc.hadoopConfiguration.set(acntInfo, blobAccessKey)
 val dwDatabase ="pool_singheradevops"
 val dwServer = "ws-aue-dev-glbcld.sql.azuresynapse.net"
 val dwUser ="sqladmin"
-val dwPass ="2ytIvKIDyD1G9LSf"
+val dwPass ="nDCPORurbp6sjflN"
 val dwJdbcPort =  "1433"
 val dwJdbcExtraOptions = "encrypt=true;trustServerCertificate=true;hostNameInCertificate=*.database.windows.net;loginTimeout=30;"
 val sqlDwUrl = "jdbc:sqlserver://" + dwServer + ":" + dwJdbcPort + ";database=" + dwDatabase + ";user=" + dwUser+";password=" + dwPass + ";$dwJdbcExtraOptions"
