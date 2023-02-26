@@ -16,7 +16,8 @@ resource "azurerm_resource_group" "this" {
 }
 
 resource "azurerm_key_vault" "this" {
-  name = "singherazurerm"
+   name = format("kv-%s-%s-%s",
+  local.naming.location[var.location], var.environment, var.project)
 
   resource_group_name = azurerm_resource_group.this.name
   location            = azurerm_resource_group.this.location
