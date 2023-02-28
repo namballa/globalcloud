@@ -7,7 +7,7 @@ import pyspark
 from pyspark.sql import SparkSession
 spark = SparkSession.builder.master("local[1]").appName("Gloabal Cloud by Hari").getOrCreate()
 
-df=spark.read.format("csv").option("header","true").load("1.csv,2.csv")
+df=spark.read.format("csv").option("header","true").load("1.csv")
 df.show()
 # sc = SparkContext("local", "count app")
 # words = sc.parallelize (
